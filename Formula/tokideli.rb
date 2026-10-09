@@ -15,6 +15,10 @@ class Tokideli < Formula
     bin.install "bin/sleep" => "tdsleep"
     bin.install(Dir["bin/*"] - ["bin/sleep"])
     doc.install Dir["manual/*.md"] - ["manual/CLAUDE.md"]
+    # Homebrew auto-detects and installs a plain "README.md" from the
+    # source root on its own, but not language-suffixed variants, so the
+    # Japanese/English versions need to be installed explicitly to match.
+    prefix.install "README.ja.md", "README.en.md"
   end
 
   def caveats
