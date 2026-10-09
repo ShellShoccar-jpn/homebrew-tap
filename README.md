@@ -9,6 +9,13 @@ brew tap ShellShoccar-jpn/tap
 brew install tokideli
 ```
 
+If your Homebrew refuses to load the formula with "Refusing to load
+formula ... from untrusted tap", trust this tap first:
+
+```sh
+brew trust ShellShoccar-jpn/tap
+```
+
 ## Formulae
 
 * [`tokideli`](Formula/tokideli.rb) — [A collection of lightweight POSIX-compliant commands for accurate time management](https://github.com/ShellShoccar-jpn/tokideli).
